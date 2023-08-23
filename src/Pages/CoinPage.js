@@ -1,7 +1,12 @@
+import CoinDetail from "../components/CoinDetail"
+import HistoryChart from "../components/HistoryChart"
 
 const CoinPage = () => {
   return (
-    <div></div>
+    <div className="wrapper-container mt-10">
+      <HistoryChart />
+      <CoinDetail />
+    </div>
   )
 }
 
