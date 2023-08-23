@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route} from 'react-router-dom';
+import Header from './components/Header';
+import Homepage from './Pages/Homepage';
+import CoinPage from './Pages/CoinPage';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to the homepage! 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+    return (
+      <BrowserRouter>
+        <div>
+          <Header />
+            <Route path="/" component={Homepage} exact />
+            <Route path="/coins/:id" component={CoinPage} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+  
 
 export default App;
