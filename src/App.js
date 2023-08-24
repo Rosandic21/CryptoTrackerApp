@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
       <Header />
       <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/*" element={<Homepage />} />
           <Route path="/coin/:id" element={<CoinPage />} />
       </Routes>
       </BrowserRouter>
